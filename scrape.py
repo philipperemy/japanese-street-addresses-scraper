@@ -18,6 +18,7 @@ USE_VPN = True
 
 
 # Test also this: https://itp.ne.jp/01100/genre_dir/pg/145/?num=20
+# This contains email: https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20 - for now we miss it!
 
 
 class PaginationEndException(Exception):
@@ -108,7 +109,8 @@ def main():
         logging.info('REGION DONE: {}'.format(region))
 
 
-process_one_url('https://itp.ne.jp/01100/genre_dir/pg/145/?num=20')
+# process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
+# exit(1)
 
 
 def change_ip():
