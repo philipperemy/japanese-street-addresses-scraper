@@ -27,8 +27,8 @@ def forge_url(prefix, iteration):
     return prefix + 'pg/{}/?num=20'.format(iteration)
 
 
-def write_entry(fp, el):
-    logging.info(el)
+def write_entry(fp, el, code):
+    logging.info(code + ' ' + el)
     el += '\n'
     fp.write(el.encode('utf8'))
 
@@ -49,14 +49,14 @@ def process_one_url(url):
         name_element = result.find('a', {'class': 'blueText'})
         if name_element is not None:
             name_element = str(name_element.contents[0]).strip()
-            write_entry(fp=NAME_FP, el=name_element)
+            write_entry(fp=NAME_FP, el=name_element, code='NAME')
 
         # EMAIL PART
         email_element = result.find('a', {'class': 'boxedLink emailLink'})
         if email_element is not None:
             email_element = email_element.attrs['onclick'].split(',')[-1] \
                 .replace("'", '').replace(')', '').replace('(', '').strip()
-            write_entry(fp=EMAIL_FP, el=email_element)
+            write_entry(fp=EMAIL_FP, el=email_element, code='MAIL')
 
         # ADDRESS PART
         if '〒' in str(result):
@@ -66,7 +66,7 @@ def process_one_url(url):
                     for c in con:
                         if '〒' in str(c):
                             address = str(c.contents[1]).strip()
-                            write_entry(fp=ADDRESS_FP, el=address)
+                            write_entry(fp=ADDRESS_FP, el=address, code='ADDR')
                             # logging.info(address)
                             # address += '\n'
                             # W_FP.write(address.encode('utf8'))
