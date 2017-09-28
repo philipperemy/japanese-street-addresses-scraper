@@ -17,6 +17,9 @@ EMAIL_FP = open('/tmp/emails.txt', 'wb')
 USE_VPN = True
 
 
+# Test also this: https://itp.ne.jp/01100/genre_dir/pg/145/?num=20
+
+
 class PaginationEndException(Exception):
     pass
 
@@ -46,8 +49,10 @@ def process_one_url(url):
     for result in results:
 
         # NAME PART
-        name_element = result.find('a', {'class': 'blueText'})
-        if name_element is not None:
+        for possible_tag in ['blueText', 'blackText']:
+            name_element = result.find('a', {'class': possible_tag})
+            if name_element is None:
+                continue
             name_element = str(name_element.contents[0]).strip()
             write_entry(fp=NAME_FP, el=name_element, code='NAME')
 
@@ -101,6 +106,9 @@ def main():
                     raise e
             logging.info('SUB_REGION DONE: {}'.format(sub_region))
         logging.info('REGION DONE: {}'.format(region))
+
+
+process_one_url('https://itp.ne.jp/01100/genre_dir/pg/145/?num=20')
 
 
 def change_ip():
