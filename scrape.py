@@ -9,9 +9,12 @@ from expressvpn import wrapper
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)15s - %(levelname)s - %(message)s')
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
-BIG_ADDRESS_FILENAME = '/tmp/addresses.txt'
 
-W_FP = open(BIG_ADDRESS_FILENAME, 'wb')
+ADDRESS_FP = open('/tmp/addresses.txt', 'wb')
+NAME_FP = open('/tmp/names.txt', 'wb')
+EMAIL_FP = open('/tmp/emails.txt', 'wb')
+
+USE_VPN = False
 
 
 class PaginationEndException(Exception):
@@ -22,6 +25,12 @@ def forge_url(prefix, iteration):
     # http://itp.ne.jp/46201/genre_dir/
     # https://itp.ne.jp/aomori/02201/genre_dir/pg/150/?num=20
     return prefix + 'pg/{}/?num=20'.format(iteration)
+
+
+def write_entry(fp, el):
+    logging.info(el)
+    el += '\n'
+    fp.write(el.encode('utf8'))
 
 
 def process_one_url(url):
@@ -35,16 +44,32 @@ def process_one_url(url):
         raise PaginationEndException()
     results = soup.find_all('div', {'class': 'normalResultsBox'})
     for result in results:
+
+        # NAME PART
+        name_element = result.find('a', {'class': 'blueText'})
+        if name_element is not None:
+            name_element = str(name_element.contents[0]).strip()
+            write_entry(fp=NAME_FP, el=name_element)
+
+        # EMAIL PART
+        email_element = result.find('a', {'class': 'boxedLink emailLink'})
+        if email_element is not None:
+            email_element = email_element.attrs['onclick'].split(',')[-1] \
+                .replace("'", '').replace(')', '').replace('(', '').strip()
+            write_entry(fp=EMAIL_FP, el=email_element)
+
+        # ADDRESS PART
         if '〒' in str(result):
             cons = result.contents[1].contents
             for con in cons:
                 if '〒' in str(con):
                     for c in con:
                         if '〒' in str(c):
-                            address = str(c.contents[1])
-                            logging.info(address)
-                            address += '\n'
-                            W_FP.write(address.encode('utf8'))
+                            address = str(c.contents[1]).strip()
+                            write_entry(fp=ADDRESS_FP, el=address)
+                            # logging.info(address)
+                            # address += '\n'
+                            # W_FP.write(address.encode('utf8'))
                             break
 
 
@@ -72,13 +97,16 @@ def main():
                 except PaginationEndException:
                     logging.info('PaginationEndException!')
                 except Exception as e:
-                    W_FP.close()
+                    ADDRESS_FP.close()
                     raise e
             logging.info('SUB_REGION DONE: {}'.format(sub_region))
         logging.info('REGION DONE: {}'.format(region))
 
 
 def change_ip():
+    if not USE_VPN:
+        return
+
     max_attempts = 10
     attempts = 0
     while True:
