@@ -14,7 +14,7 @@ ADDRESS_FP = open('/tmp/addresses.txt', 'wb')
 NAME_FP = open('/tmp/names.txt', 'wb')
 EMAIL_FP = open('/tmp/emails.txt', 'wb')
 
-USE_VPN = False
+USE_VPN = True
 
 
 class PaginationEndException(Exception):
@@ -74,7 +74,7 @@ def process_one_url(url):
 
 
 def main():
-    change_ip()
+    # change_ip()
     with open('regions.json', 'rb') as r:
         regions = json.load(r)
     for region, sub_regions in regions.items():
