@@ -31,19 +31,16 @@ def main():
     assert response.status_code == 200
     regions_dict = dict()
     soup = BeautifulSoup(response.content, 'html.parser')
-    regions = soup.find('div', {'class': 'txt-table'})
+    regions = soup.find('div', {'class': 'txt-table'}).find_all('a')
     for region in regions:
         if not isinstance(region, NavigableString):
-            region_name = str(region.contents[0].contents[0])
-            for tag in region.contents[1].contents:
-                if 'href' not in tag.attrs:
-                    continue
-                url = YELLOW_PAGE_URL + str(tag.attrs['href'])
-                print(region_name, url)
-                sub_regions = get_sub_regions(region_url=url)
-                regions_dict[region_name] = dict()
-                regions_dict[region_name]['url'] = url
-                regions_dict[region_name]['sub_region'] = sub_regions
+            region_name = str(region.contents[0])
+            url = YELLOW_PAGE_URL + str(region.attrs['href'])
+            print(region_name, url)
+            sub_regions = get_sub_regions(region_url=url)
+            regions_dict[region_name] = dict()
+            regions_dict[region_name]['url'] = url
+            regions_dict[region_name]['sub_region'] = sub_regions
 
     with open('regions.json', 'wb') as w:
         w.write(json.dumps(regions_dict, ensure_ascii=False, indent=4).encode('utf8'))
