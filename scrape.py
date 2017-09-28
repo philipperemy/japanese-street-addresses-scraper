@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from time import sleep
 
 import requests
@@ -44,6 +45,11 @@ def process_one_url(url):
     assert response.status_code == 200
     content = response.content
     soup = BeautifulSoup(content, 'html.parser')
+
+    emails = re.findall("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", str(soup))
+    for email in emails:
+        write_entry(fp=EMAIL_FP, el=email.strip(), code='MAIL')
+
     if len(soup.find_all('p', {'class': 'townkunMessageContent'})) > 0:
         raise PaginationEndException()
     results = soup.find_all('div', {'class': 'normalResultsBox'})
@@ -58,11 +64,11 @@ def process_one_url(url):
             write_entry(fp=NAME_FP, el=name_element, code='NAME')
 
         # EMAIL PART
-        email_element = result.find('a', {'class': 'boxedLink emailLink'})
-        if email_element is not None:
-            email_element = email_element.attrs['onclick'].split(',')[-1] \
-                .replace("'", '').replace(')', '').replace('(', '').strip()
-            write_entry(fp=EMAIL_FP, el=email_element, code='MAIL')
+        # email_element = result.find('a', {'class': 'boxedLink emailLink'})
+        # if email_element is not None:
+        #     email_element = email_element.attrs['onclick'].split(',')[-1] \
+        #         .replace("'", '').replace(')', '').replace('(', '').strip()
+        #     write_entry(fp=EMAIL_FP, el=email_element, code='MAIL')
 
         # ADDRESS PART
         if '〒' in str(result):
@@ -77,6 +83,9 @@ def process_one_url(url):
                             # address += '\n'
                             # W_FP.write(address.encode('utf8'))
                             break
+
+
+# process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
 
 
 def main():
