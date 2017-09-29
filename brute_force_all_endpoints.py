@@ -49,11 +49,11 @@ def main():
 def process_url(url):
     if url in ALL_URL_DICT:
         print('URL = {} already fetched. Skipping.'.format(url))
-
-    response = requests.get(url)
-    status = (response.status_code == 200)
-    ALL_URL_DICT[url] = status
-    print('-> URL = {}, STATUS = {}'.format(url, status))
+    else:
+        response = requests.get(url)
+        status = (response.status_code == 200)
+        ALL_URL_DICT[url] = status
+        print('-> URL = {}, STATUS = {}'.format(url, status))
 
 
 if __name__ == '__main__':
