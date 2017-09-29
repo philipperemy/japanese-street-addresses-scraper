@@ -21,7 +21,7 @@ def get_soup_vpn(url):
         return get_soup(url)
     except:
         change_ip()
-        return get_soup(url)
+        return get_soup_vpn(url)  # recursion
 
 
 def get_sub_sub_region(sub_region_url):
