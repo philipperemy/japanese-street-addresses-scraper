@@ -129,9 +129,6 @@ def main():
                             sleep(10)
                 except PaginationEndException:
                     logging.info('PaginationEndException!')
-                except Exception as e:
-                    ADDRESS_FP.close()
-                    raise e
 
             with open(PERSISTENCE_FILENAME, 'ab+') as w:
                 w.write(sub_region.encode('utf8'))
