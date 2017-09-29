@@ -45,8 +45,8 @@ def main():
     for i in range(0, 100000, steps):
         all_urls = []
         range_j = range(i, i + steps)
-        all_urls.extend(forge_brute_force_url([j for j in range_j]))
-        all_urls.extend(forge_brute_force_url(['0' + str(j) for j in range_j]))
+        all_urls.extend([forge_brute_force_url(j) for j in range_j])
+        all_urls.extend([forge_brute_force_url('0' + j) for j in range_j])
         all_urls = sorted(list(set(all_urls) - set(ALL_URL_DICT.keys())))
 
         if len(all_urls) > 0:
