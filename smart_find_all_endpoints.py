@@ -16,14 +16,15 @@ def get_soup(url):
     return soup
 
 
-def get_soup_vpn(url, max_attempts=3):
+def get_soup_vpn(url):
     try:
-        if max_attempts <= 0:
-            return None
         return get_soup(url)
     except:
         change_ip()
-        return get_soup_vpn(url, max_attempts - 1)  # recursion
+        try:
+            return get_soup(url)
+        except:
+            return None
 
 
 def get_sub_sub_region(sub_region_url):
