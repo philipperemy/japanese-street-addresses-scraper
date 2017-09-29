@@ -33,6 +33,7 @@ def get_sub_regions(region_url, include_all_sub_regions=True):
     resp = dict()
     all_links_2 = []
     for link in all_links_1:
+        print('-> {} [from the map]'.format(link))
         all_links_2.extend(get_sub_sub_region(link))
     resp['level_1'] = all_links_1
     resp['level_2'] = all_links_2
