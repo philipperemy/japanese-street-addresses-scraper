@@ -39,6 +39,7 @@ def write_entry(fp, el, code):
     logging.info(code + ' ' + el)
     el += '\n'
     fp.write(el.encode('utf8'))
+    fp.flush()
 
 
 def process_one_url(url):
