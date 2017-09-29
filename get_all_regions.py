@@ -47,5 +47,5 @@ def main(include_all_sub_regions=True, output_filename='region.json'):
 
 
 if __name__ == '__main__':
-    main(include_all_sub_regions=True, output_filename='region_1.json')
-    main(include_all_sub_regions=False, output_filename='region_2.json')
+    main(include_all_sub_regions=True, output_filename='regions_1.json')
+    main(include_all_sub_regions=False, output_filename='regions_2.json')

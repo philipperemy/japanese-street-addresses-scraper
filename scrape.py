@@ -92,9 +92,9 @@ def process_one_url(url):
 # process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
 
 
-def main():
+def main(input_filename):
     # change_ip()
-    with open('regions.json', 'rb') as r:
+    with open(input_filename, 'rb') as r:
         regions = OrderedDict(json.load(r))
 
     persistence = []
@@ -164,4 +164,4 @@ def change_ip():
 
 
 if __name__ == '__main__':
-    main()
+    main(input_filename='regions.json')
