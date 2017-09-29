@@ -3,6 +3,7 @@ import os
 from time import sleep
 
 import requests
+from requests.exceptions import ConnectionError
 
 from scrape import change_ip
 
@@ -30,18 +31,19 @@ def write_to_persistence():
 def main():
     for i in range(100000):
         print('Iteration {}'.format(i))
-        url = forge_brute_force_url(i)
-        process_url(url)
-        url = forge_brute_force_url('0' + str(i))
-        process_url(url)
-        sleep(0.1)
+        try:
+            url = forge_brute_force_url(i)
+            process_url(url)
+            url = forge_brute_force_url('0' + str(i))
+            process_url(url)
+            sleep(0.1)
 
-        if i % 100 == 0:
-            write_to_persistence()
-            response = requests.get('https://itp.ne.jp/miyagi/')
-            if response.status_code != 200:
-                print('We got blocked!!')
-                change_ip()
+            if i % 100 == 0:
+                write_to_persistence()
+
+        except ConnectionError:
+            print('We got blocked!!')
+            change_ip()
 
 
 def process_url(url):
