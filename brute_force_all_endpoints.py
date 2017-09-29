@@ -1,6 +1,5 @@
 import json
 import os
-from time import sleep
 
 import requests
 from requests.exceptions import ConnectionError
@@ -36,7 +35,6 @@ def main():
             process_url(url)
             url = forge_brute_force_url('0' + str(i))
             process_url(url)
-            sleep(0.1)
 
             if i % 100 == 0:
                 write_to_persistence()
