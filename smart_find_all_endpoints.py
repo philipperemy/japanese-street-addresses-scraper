@@ -34,7 +34,9 @@ def get_sub_regions(region_url, include_all_sub_regions=True):
     all_links_2 = []
     for link in all_links_1:
         print('-> {} [from the map]'.format(link))
-        all_links_2.extend(get_sub_sub_region(link))
+        links_found = get_sub_sub_region(link)
+        print('Found links {}'.format(links_found))
+        all_links_2.extend(links_found)
     resp['level_1'] = all_links_1
     resp['level_2'] = all_links_2
     print('Found {0} links for level 1'.format(len(all_links_1)))
