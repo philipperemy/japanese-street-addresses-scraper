@@ -18,7 +18,7 @@ def get_sub_regions_from_main_tab(soup, class_name='region47', tag='li'):
     return sub_region_dict
 
 
-def get_sub_regions(region_url):
+def get_sub_regions(region_url, include_all_sub_regions=True):
     response = requests.get(region_url)
     assert response.status_code == 200
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -26,7 +26,7 @@ def get_sub_regions(region_url):
     return get_sub_regions_from_main_tab(soup, 'area-all', 'p')
 
 
-def main():
+def main(include_all_sub_regions=True, output_filename='region.json'):
     response = requests.get(YELLOW_PAGE_URL)
     assert response.status_code == 200
     regions_dict = dict()
@@ -37,14 +37,15 @@ def main():
             region_name = str(region.contents[0])
             url = YELLOW_PAGE_URL + str(region.attrs['href'])
             print(region_name, url)
-            sub_regions = get_sub_regions(region_url=url)
+            sub_regions = get_sub_regions(region_url=url, include_all_sub_regions=include_all_sub_regions)
             regions_dict[region_name] = dict()
             regions_dict[region_name]['url'] = url
             regions_dict[region_name]['sub_region'] = sub_regions
 
-    with open('regions.json', 'wb') as w:
+    with open(output_filename, 'wb') as w:
         w.write(json.dumps(regions_dict, ensure_ascii=False, indent=4).encode('utf8'))
 
 
 if __name__ == '__main__':
-    main()
+    main(include_all_sub_regions=True, output_filename='region_1.json')
+    main(include_all_sub_regions=False, output_filename='region_2.json')
