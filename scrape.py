@@ -32,7 +32,7 @@ class PaginationEndException(Exception):
 def forge_url(prefix, iteration):
     # http://itp.ne.jp/46201/genre_dir/
     # https://itp.ne.jp/aomori/02201/genre_dir/pg/150/?num=20
-    return prefix + 'pg/{}/?num=20'.format(iteration)
+    return prefix + 'pg/{}/?num=50'.format(iteration)
 
 
 def write_entry(fp, el, code):
