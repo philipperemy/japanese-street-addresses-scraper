@@ -22,8 +22,8 @@ def get_sub_regions(region_url):
     response = requests.get(region_url)
     assert response.status_code == 200
     soup = BeautifulSoup(response.content, 'html.parser')
-    return get_sub_regions_from_main_tab(soup, 'region47', 'li')
-    # sub_regions.extend(get_li_from_specific_class_in_region_tab(soup, 'area-all', 'p')) include all of them twice.
+    # return get_sub_regions_from_main_tab(soup, 'region47', 'li')
+    return get_sub_regions_from_main_tab(soup, 'area-all', 'p')
 
 
 def main():

@@ -1,19 +1,22 @@
 import json
 import logging
+import os
 import re
+from collections import OrderedDict
 from time import sleep
 
 import requests
 from bs4 import BeautifulSoup
 from expressvpn import wrapper
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)15s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
 
 ADDRESS_FP = open('/tmp/addresses.txt', 'wb')
 NAME_FP = open('/tmp/names.txt', 'wb')
 EMAIL_FP = open('/tmp/emails.txt', 'wb')
+PERSISTENCE_FILENAME = 'persistence.txt'
 
 USE_VPN = True
 
@@ -91,10 +94,24 @@ def process_one_url(url):
 def main():
     # change_ip()
     with open('regions.json', 'rb') as r:
-        regions = json.load(r)
+        regions = OrderedDict(json.load(r))
+
+    sub_regions_already_fetched = []
+    if os.path.isfile(PERSISTENCE_FILENAME):
+        with open(PERSISTENCE_FILENAME, 'rb') as r:
+            lines = [v.decode('utf8').strip() for v in r.readlines()]
+            sub_regions_already_fetched.extend(lines)
+
     for region, sub_regions in regions.items():
         logging.info('REGION: {}'.format(region))
-        for sub_region, prefix_urls in sub_regions['sub_region'].items():
+        sub_regions_ordered = OrderedDict(sub_regions)
+        for sub_region, prefix_urls in sub_regions_ordered['sub_region'].items():
+
+            if sub_region in sub_regions_already_fetched:
+                logging.info('SKIPPING: SUB_REGION ALREADY FETCHED {}'.format(sub_region))
+                continue
+
+            logging.info('-' * 80)
             logging.info('SUB_REGION: {}'.format(sub_region))
             logging.info(prefix_urls)
             if isinstance(prefix_urls, str):
@@ -104,7 +121,8 @@ def main():
                     for iteration in range(1000000):
                         request_url = forge_url(prefix_url, iteration)
                         try:
-                            process_one_url(request_url)
+                            pass
+                            # process_one_url(request_url)
                         except requests.exceptions.ConnectionError:
                             logging.info('Received a ConnectionError. Will wait 10 seconds, then resume.')
                             change_ip()
@@ -114,6 +132,12 @@ def main():
                 except Exception as e:
                     ADDRESS_FP.close()
                     raise e
+
+            with open(PERSISTENCE_FILENAME, 'ab+') as w:
+                w.write(sub_region.encode('utf8'))
+                w.write('\n'.encode('utf8'))
+                w.flush()
+
             logging.info('SUB_REGION DONE: {}'.format(sub_region))
         logging.info('REGION DONE: {}'.format(region))
 

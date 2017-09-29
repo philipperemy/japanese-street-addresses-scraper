@@ -2,704 +2,283 @@
     "北海道": {
         "url": "https://itp.ne.jp/hokkaido/",
         "sub_region": {
-            "札幌市": "http://itp.ne.jp/01100/genre_dir/",
-            "旭川市": "http://itp.ne.jp/01204/genre_dir/",
-            "函館市": "http://itp.ne.jp/01202/genre_dir/",
-            "釧路市": "http://itp.ne.jp/01206/genre_dir/",
-            "苫小牧市": "http://itp.ne.jp/01213/genre_dir/",
-            "帯広市": "http://itp.ne.jp/01207/genre_dir/",
-            "小樽市": "http://itp.ne.jp/01203/genre_dir/",
-            "北見市": "http://itp.ne.jp/01208/genre_dir/",
-            "江別市": "http://itp.ne.jp/01217/genre_dir/",
-            "室蘭市": "http://itp.ne.jp/01205/genre_dir/"
+            "北海道全域": "http://itp.ne.jp/01/genre_dir/"
         }
     },
     "宮城": {
         "url": "https://itp.ne.jp/miyagi/",
         "sub_region": {
-            "仙台市": "http://itp.ne.jp/04100/genre_dir/",
-            "石巻市": "http://itp.ne.jp/04202/genre_dir/",
-            "大崎市": "http://itp.ne.jp/04215/genre_dir/",
-            "登米市": "http://itp.ne.jp/04212/genre_dir/",
-            "栗原市": "http://itp.ne.jp/04213/genre_dir/",
-            "気仙沼市": "http://itp.ne.jp/04205/genre_dir/",
-            "名取市": "http://itp.ne.jp/04207/genre_dir/",
-            "多賀城市": "http://itp.ne.jp/04209/genre_dir/",
-            "塩竈市": "http://itp.ne.jp/04203/genre_dir/",
-            "岩沼市": "http://itp.ne.jp/04211/genre_dir/"
+            "宮城県全域": "http://itp.ne.jp/04/genre_dir/"
         }
     },
     "青森": {
         "url": "https://itp.ne.jp/aomori/",
         "sub_region": {
-            "青森市": "http://itp.ne.jp/02201/genre_dir/",
-            "八戸市": "http://itp.ne.jp/02203/genre_dir/",
-            "弘前市": "http://itp.ne.jp/02202/genre_dir/",
-            "十和田市": "http://itp.ne.jp/02206/genre_dir/",
-            "むつ市": "http://itp.ne.jp/02208/genre_dir/",
-            "五所川原市": "http://itp.ne.jp/02205/genre_dir/",
-            "三沢市": "http://itp.ne.jp/02207/genre_dir/",
-            "つがる市": "http://itp.ne.jp/02209/genre_dir/",
-            "黒石市": "http://itp.ne.jp/02204/genre_dir/",
-            "平川市": "http://itp.ne.jp/02210/genre_dir/"
+            "青森県全域": "http://itp.ne.jp/02/genre_dir/"
         }
     },
     "岩手": {
         "url": "https://itp.ne.jp/iwate/",
         "sub_region": {
-            "盛岡市": "http://itp.ne.jp/03201/genre_dir/",
-            "一関市": "http://itp.ne.jp/03209/genre_dir/",
-            "奥州市": "http://itp.ne.jp/03215/genre_dir/",
-            "花巻市": "http://itp.ne.jp/03205/genre_dir/",
-            "北上市": "http://itp.ne.jp/03206/genre_dir/",
-            "宮古市": "http://itp.ne.jp/03202/genre_dir/",
-            "大船渡市": "http://itp.ne.jp/03203/genre_dir/",
-            "釜石市": "http://itp.ne.jp/03211/genre_dir/",
-            "久慈市": "http://itp.ne.jp/03207/genre_dir/",
-            "二戸市": "http://itp.ne.jp/03213/genre_dir/"
+            "岩手県全域": "http://itp.ne.jp/03/genre_dir/"
         }
     },
     "福島": {
         "url": "https://itp.ne.jp/fukushima/",
         "sub_region": {
-            "いわき市": "http://itp.ne.jp/07204/genre_dir/",
-            "郡山市": "http://itp.ne.jp/07203/genre_dir/",
-            "福島市": "http://itp.ne.jp/07201/genre_dir/",
-            "会津若松市": "http://itp.ne.jp/07202/genre_dir/",
-            "須賀川市": "http://itp.ne.jp/07207/genre_dir/",
-            "南相馬市": "http://itp.ne.jp/07212/genre_dir/",
-            "伊達市": "http://itp.ne.jp/07213/genre_dir/",
-            "白河市": "http://itp.ne.jp/07205/genre_dir/",
-            "二本松市": "http://itp.ne.jp/07210/genre_dir/",
-            "喜多方市": "http://itp.ne.jp/07208/genre_dir/"
+            "福島県全域": "http://itp.ne.jp/07/genre_dir/"
         }
     },
     "山形": {
         "url": "https://itp.ne.jp/yamagata/",
         "sub_region": {
-            "山形市": "http://itp.ne.jp/06201/genre_dir/",
-            "鶴岡市": "http://itp.ne.jp/06203/genre_dir/",
-            "酒田市": "http://itp.ne.jp/06204/genre_dir/",
-            "米沢市": "http://itp.ne.jp/06202/genre_dir/",
-            "天童市": "http://itp.ne.jp/06210/genre_dir/",
-            "東根市": "http://itp.ne.jp/06211/genre_dir/",
-            "寒河江市": "http://itp.ne.jp/06206/genre_dir/",
-            "新庄市": "http://itp.ne.jp/06205/genre_dir/",
-            "上山市": "http://itp.ne.jp/06207/genre_dir/",
-            "南陽市": "http://itp.ne.jp/06213/genre_dir/"
+            "山形県全域": "http://itp.ne.jp/06/genre_dir/"
         }
     },
     "秋田": {
         "url": "https://itp.ne.jp/akita/",
         "sub_region": {
-            "秋田市": "http://itp.ne.jp/05201/genre_dir/",
-            "横手市": "http://itp.ne.jp/05203/genre_dir/",
-            "大仙市": "http://itp.ne.jp/05212/genre_dir/",
-            "由利本荘市": "http://itp.ne.jp/05210/genre_dir/",
-            "大館市": "http://itp.ne.jp/05204/genre_dir/",
-            "能代市": "http://itp.ne.jp/05202/genre_dir/",
-            "湯沢市": "http://itp.ne.jp/05207/genre_dir/",
-            "北秋田市": "http://itp.ne.jp/05213/genre_dir/",
-            "鹿角市": "http://itp.ne.jp/05209/genre_dir/",
-            "潟上市": "http://itp.ne.jp/05211/genre_dir/"
+            "秋田県全域": "http://itp.ne.jp/05/genre_dir/"
         }
     },
     "東京": {
         "url": "https://itp.ne.jp/tokyo/",
         "sub_region": {
-            "八王子市": "http://itp.ne.jp/13201/genre_dir/",
-            "町田市": "http://itp.ne.jp/13209/genre_dir/",
-            "府中市": "http://itp.ne.jp/13206/genre_dir/",
-            "調布市": "http://itp.ne.jp/13208/genre_dir/",
-            "西東京市": "http://itp.ne.jp/13229/genre_dir/",
-            "小平市": "http://itp.ne.jp/13211/genre_dir/",
-            "三鷹市": "http://itp.ne.jp/13204/genre_dir/",
-            "日野市": "http://itp.ne.jp/13212/genre_dir/",
-            "立川市": "http://itp.ne.jp/13202/genre_dir/",
-            "東村山市": "http://itp.ne.jp/13213/genre_dir/"
+            "東京都全域": "http://itp.ne.jp/13/genre_dir/"
         }
     },
     "埼玉": {
         "url": "https://itp.ne.jp/saitama/",
         "sub_region": {
-            "さいたま市": "http://itp.ne.jp/11100/genre_dir/",
-            "川口市": "http://itp.ne.jp/11203/genre_dir/",
-            "川越市": "http://itp.ne.jp/11201/genre_dir/",
-            "所沢市": "http://itp.ne.jp/11208/genre_dir/",
-            "越谷市": "http://itp.ne.jp/11222/genre_dir/",
-            "草加市": "http://itp.ne.jp/11221/genre_dir/",
-            "春日部市": "http://itp.ne.jp/11214/genre_dir/",
-            "上尾市": "http://itp.ne.jp/11219/genre_dir/",
-            "熊谷市": "http://itp.ne.jp/11202/genre_dir/",
-            "新座市": "http://itp.ne.jp/11230/genre_dir/"
+            "埼玉県全域": "http://itp.ne.jp/11/genre_dir/"
         }
     },
     "茨城": {
         "url": "https://itp.ne.jp/ibaraki/",
         "sub_region": {
-            "水戸市": "http://itp.ne.jp/08201/genre_dir/",
-            "つくば市": "http://itp.ne.jp/08220/genre_dir/",
-            "日立市": "http://itp.ne.jp/08202/genre_dir/",
-            "ひたちなか市": "http://itp.ne.jp/08221/genre_dir/",
-            "土浦市": "http://itp.ne.jp/08203/genre_dir/",
-            "古河市": "http://itp.ne.jp/08204/genre_dir/",
-            "取手市": "http://itp.ne.jp/08217/genre_dir/",
-            "筑西市": "http://itp.ne.jp/08227/genre_dir/",
-            "神栖市": "http://itp.ne.jp/08232/genre_dir/",
-            "牛久市": "http://itp.ne.jp/08219/genre_dir/"
+            "茨城県全域": "http://itp.ne.jp/08/genre_dir/"
         }
     },
     "栃木": {
         "url": "https://itp.ne.jp/tochigi/",
         "sub_region": {
-            "宇都宮市": "http://itp.ne.jp/09201/genre_dir/",
-            "小山市": "http://itp.ne.jp/09208/genre_dir/",
-            "足利市": "http://itp.ne.jp/09202/genre_dir/",
-            "栃木市": "http://itp.ne.jp/09203/genre_dir/",
-            "佐野市": "http://itp.ne.jp/09204/genre_dir/",
-            "那須塩原市": "http://itp.ne.jp/09213/genre_dir/",
-            "鹿沼市": "http://itp.ne.jp/09205/genre_dir/",
-            "日光市": "http://itp.ne.jp/09206/genre_dir/",
-            "真岡市": "http://itp.ne.jp/09209/genre_dir/",
-            "大田原市": "http://itp.ne.jp/09210/genre_dir/"
+            "栃木県全域": "http://itp.ne.jp/09/genre_dir/"
         }
     },
     "神奈川": {
         "url": "https://itp.ne.jp/kanagawa/",
         "sub_region": {
-            "横浜市": "http://itp.ne.jp/14100/genre_dir/",
-            "川崎市": "http://itp.ne.jp/14130/genre_dir/",
-            "相模原市": "http://itp.ne.jp/14150/genre_dir/",
-            "横須賀市": "http://itp.ne.jp/14201/genre_dir/",
-            "藤沢市": "http://itp.ne.jp/14205/genre_dir/",
-            "平塚市": "http://itp.ne.jp/14203/genre_dir/",
-            "茅ヶ崎市": "http://itp.ne.jp/14207/genre_dir/",
-            "大和市": "http://itp.ne.jp/14213/genre_dir/",
-            "厚木市": "http://itp.ne.jp/14212/genre_dir/",
-            "小田原市": "http://itp.ne.jp/14206/genre_dir/"
+            "神奈川県全域": "http://itp.ne.jp/14/genre_dir/"
         }
     },
     "千葉": {
         "url": "https://itp.ne.jp/chiba/",
         "sub_region": {
-            "千葉市": "http://itp.ne.jp/12100/genre_dir/",
-            "船橋市": "http://itp.ne.jp/12204/genre_dir/",
-            "松戸市": "http://itp.ne.jp/12207/genre_dir/",
-            "市川市": "http://itp.ne.jp/12203/genre_dir/",
-            "柏市": "http://itp.ne.jp/12217/genre_dir/",
-            "市原市": "http://itp.ne.jp/12219/genre_dir/",
-            "八千代市": "http://itp.ne.jp/12221/genre_dir/",
-            "佐倉市": "http://itp.ne.jp/12212/genre_dir/",
-            "浦安市": "http://itp.ne.jp/12227/genre_dir/",
-            "習志野市": "http://itp.ne.jp/12216/genre_dir/"
+            "千葉県全域": "http://itp.ne.jp/12/genre_dir/"
         }
     },
     "群馬": {
         "url": "https://itp.ne.jp/gunma/",
         "sub_region": {
-            "高崎市": "http://itp.ne.jp/10202/genre_dir/",
-            "前橋市": "http://itp.ne.jp/10201/genre_dir/",
-            "太田市": "http://itp.ne.jp/10205/genre_dir/",
-            "伊勢崎市": "http://itp.ne.jp/10204/genre_dir/",
-            "桐生市": "http://itp.ne.jp/10203/genre_dir/",
-            "渋川市": "http://itp.ne.jp/10208/genre_dir/",
-            "館林市": "http://itp.ne.jp/10207/genre_dir/",
-            "藤岡市": "http://itp.ne.jp/10209/genre_dir/",
-            "安中市": "http://itp.ne.jp/10211/genre_dir/",
-            "富岡市": "http://itp.ne.jp/10210/genre_dir/"
+            "群馬県全域": "http://itp.ne.jp/10/genre_dir/"
         }
     },
     "山梨": {
         "url": "https://itp.ne.jp/yamanashi/",
         "sub_region": {
-            "甲府市": "http://itp.ne.jp/19201/genre_dir/",
-            "甲斐市": "http://itp.ne.jp/19210/genre_dir/",
-            "南アルプス市": "http://itp.ne.jp/19208/genre_dir/",
-            "笛吹市": "http://itp.ne.jp/19211/genre_dir/",
-            "富士吉田市": "http://itp.ne.jp/19202/genre_dir/",
-            "北杜市": "http://itp.ne.jp/19209/genre_dir/",
-            "山梨市": "http://itp.ne.jp/19205/genre_dir/",
-            "甲州市": "http://itp.ne.jp/19213/genre_dir/",
-            "都留市": "http://itp.ne.jp/19204/genre_dir/",
-            "韮崎市": "http://itp.ne.jp/19207/genre_dir/"
+            "山梨県全域": "http://itp.ne.jp/19/genre_dir/"
         }
     },
     "長野": {
         "url": "https://itp.ne.jp/nagano/",
         "sub_region": {
-            "長野市": "http://itp.ne.jp/20201/genre_dir/",
-            "松本市": "http://itp.ne.jp/20202/genre_dir/",
-            "上田市": "http://itp.ne.jp/20203/genre_dir/",
-            "飯田市": "http://itp.ne.jp/20205/genre_dir/",
-            "佐久市": "http://itp.ne.jp/20217/genre_dir/",
-            "安曇野市": "http://itp.ne.jp/20220/genre_dir/",
-            "伊那市": "http://itp.ne.jp/20209/genre_dir/",
-            "塩尻市": "http://itp.ne.jp/20215/genre_dir/",
-            "千曲市": "http://itp.ne.jp/20218/genre_dir/",
-            "茅野市": "http://itp.ne.jp/20214/genre_dir/"
+            "長野県全域": "http://itp.ne.jp/20/genre_dir/"
         }
     },
     "新潟": {
         "url": "https://itp.ne.jp/niigata/",
         "sub_region": {
-            "新潟市": "http://itp.ne.jp/15100/genre_dir/",
-            "長岡市": "http://itp.ne.jp/15202/genre_dir/",
-            "上越市": "http://itp.ne.jp/15222/genre_dir/",
-            "三条市": "http://itp.ne.jp/15204/genre_dir/",
-            "新発田市": "http://itp.ne.jp/15206/genre_dir/",
-            "柏崎市": "http://itp.ne.jp/15205/genre_dir/",
-            "燕市": "http://itp.ne.jp/15213/genre_dir/",
-            "村上市": "http://itp.ne.jp/15212/genre_dir/",
-            "佐渡市": "http://itp.ne.jp/15224/genre_dir/",
-            "南魚沼市": "http://itp.ne.jp/15226/genre_dir/"
+            "新潟県全域": "http://itp.ne.jp/15/genre_dir/"
         }
     },
     "愛知": {
         "url": "https://itp.ne.jp/aichi/",
         "sub_region": {
-            "名古屋市": "http://itp.ne.jp/23100/genre_dir/",
-            "豊田市": "http://itp.ne.jp/23211/genre_dir/",
-            "一宮市": "http://itp.ne.jp/23203/genre_dir/",
-            "豊橋市": "http://itp.ne.jp/23201/genre_dir/",
-            "岡崎市": "http://itp.ne.jp/23202/genre_dir/",
-            "春日井市": "http://itp.ne.jp/23206/genre_dir/",
-            "豊川市": "http://itp.ne.jp/23207/genre_dir/",
-            "安城市": "http://itp.ne.jp/23212/genre_dir/",
-            "西尾市": "http://itp.ne.jp/23213/genre_dir/",
-            "小牧市": "http://itp.ne.jp/23219/genre_dir/"
+            "愛知県全域": "http://itp.ne.jp/23/genre_dir/"
         }
     },
     "岐阜": {
         "url": "https://itp.ne.jp/gifu/",
         "sub_region": {
-            "岐阜市": "http://itp.ne.jp/21201/genre_dir/",
-            "大垣市": "http://itp.ne.jp/21202/genre_dir/",
-            "各務原市": "http://itp.ne.jp/21213/genre_dir/",
-            "多治見市": "http://itp.ne.jp/21204/genre_dir/",
-            "可児市": "http://itp.ne.jp/21214/genre_dir/",
-            "高山市": "http://itp.ne.jp/21203/genre_dir/",
-            "関市": "http://itp.ne.jp/21205/genre_dir/",
-            "中津川市": "http://itp.ne.jp/21206/genre_dir/",
-            "羽島市": "http://itp.ne.jp/21209/genre_dir/",
-            "土岐市": "http://itp.ne.jp/21212/genre_dir/"
+            "岐阜県全域": "http://itp.ne.jp/21/genre_dir/"
         }
     },
     "三重": {
         "url": "https://itp.ne.jp/mie/",
         "sub_region": {
-            "四日市市": "http://itp.ne.jp/24202/genre_dir/",
-            "津市": "http://itp.ne.jp/24201/genre_dir/",
-            "鈴鹿市": "http://itp.ne.jp/24207/genre_dir/",
-            "松阪市": "http://itp.ne.jp/24204/genre_dir/",
-            "桑名市": "http://itp.ne.jp/24205/genre_dir/",
-            "伊勢市": "http://itp.ne.jp/24203/genre_dir/",
-            "伊賀市": "http://itp.ne.jp/24216/genre_dir/",
-            "名張市": "http://itp.ne.jp/24208/genre_dir/",
-            "志摩市": "http://itp.ne.jp/24215/genre_dir/",
-            "亀山市": "http://itp.ne.jp/24210/genre_dir/"
+            "三重県全域": "http://itp.ne.jp/24/genre_dir/"
         }
     },
     "静岡": {
         "url": "https://itp.ne.jp/shizuoka/",
         "sub_region": {
-            "浜松市": "http://itp.ne.jp/22130/genre_dir/",
-            "静岡市": "http://itp.ne.jp/22100/genre_dir/",
-            "富士市": "http://itp.ne.jp/22210/genre_dir/",
-            "沼津市": "http://itp.ne.jp/22203/genre_dir/",
-            "磐田市": "http://itp.ne.jp/22211/genre_dir/",
-            "焼津市": "http://itp.ne.jp/22212/genre_dir/",
-            "藤枝市": "http://itp.ne.jp/22214/genre_dir/",
-            "富士宮市": "http://itp.ne.jp/22207/genre_dir/",
-            "掛川市": "http://itp.ne.jp/22213/genre_dir/",
-            "三島市": "http://itp.ne.jp/22206/genre_dir/"
+            "静岡県全域": "http://itp.ne.jp/22/genre_dir/"
         }
     },
     "富山": {
         "url": "https://itp.ne.jp/toyama/",
         "sub_region": {
-            "富山市": "http://itp.ne.jp/16201/genre_dir/",
-            "高岡市": "http://itp.ne.jp/16202/genre_dir/",
-            "射水市": "http://itp.ne.jp/16211/genre_dir/",
-            "南砺市": "http://itp.ne.jp/16210/genre_dir/",
-            "氷見市": "http://itp.ne.jp/16205/genre_dir/",
-            "砺波市": "http://itp.ne.jp/16208/genre_dir/",
-            "魚津市": "http://itp.ne.jp/16204/genre_dir/",
-            "黒部市": "http://itp.ne.jp/16207/genre_dir/",
-            "滑川市": "http://itp.ne.jp/16206/genre_dir/",
-            "小矢部市": "http://itp.ne.jp/16209/genre_dir/"
+            "富山県全域": "http://itp.ne.jp/16/genre_dir/"
         }
     },
     "石川": {
         "url": "https://itp.ne.jp/ishikawa/",
         "sub_region": {
-            "金沢市": "http://itp.ne.jp/17201/genre_dir/",
-            "白山市": "http://itp.ne.jp/17210/genre_dir/",
-            "小松市": "http://itp.ne.jp/17203/genre_dir/",
-            "加賀市": "http://itp.ne.jp/17206/genre_dir/",
-            "七尾市": "http://itp.ne.jp/17202/genre_dir/",
-            "野々市市": "http://itp.ne.jp/17212/genre_dir/",
-            "能美市": "http://itp.ne.jp/17211/genre_dir/",
-            "かほく市": "http://itp.ne.jp/17209/genre_dir/",
-            "輪島市": "http://itp.ne.jp/17204/genre_dir/",
-            "河北郡内灘町": "http://itp.ne.jp/17365/genre_dir/"
+            "石川県全域": "http://itp.ne.jp/17/genre_dir/"
         }
     },
     "福井": {
         "url": "https://itp.ne.jp/fukui/",
         "sub_region": {
-            "福井市": "http://itp.ne.jp/18201/genre_dir/",
-            "坂井市": "http://itp.ne.jp/18210/genre_dir/",
-            "越前市": "http://itp.ne.jp/18209/genre_dir/",
-            "敦賀市": "http://itp.ne.jp/18202/genre_dir/",
-            "鯖江市": "http://itp.ne.jp/18207/genre_dir/",
-            "大野市": "http://itp.ne.jp/18205/genre_dir/",
-            "小浜市": "http://itp.ne.jp/18204/genre_dir/",
-            "あわら市": "http://itp.ne.jp/18208/genre_dir/",
-            "勝山市": "http://itp.ne.jp/18206/genre_dir/",
-            "丹生郡越前町": "http://itp.ne.jp/18423/genre_dir/"
+            "福井県全域": "http://itp.ne.jp/18/genre_dir/"
         }
     },
     "大阪": {
         "url": "https://itp.ne.jp/osaka/",
         "sub_region": {
-            "大阪市": "http://itp.ne.jp/27100/genre_dir/",
-            "堺市": "http://itp.ne.jp/27140/genre_dir/",
-            "東大阪市": "http://itp.ne.jp/27227/genre_dir/",
-            "枚方市": "http://itp.ne.jp/27210/genre_dir/",
-            "豊中市": "http://itp.ne.jp/27203/genre_dir/",
-            "高槻市": "http://itp.ne.jp/27207/genre_dir/",
-            "吹田市": "http://itp.ne.jp/27205/genre_dir/",
-            "茨木市": "http://itp.ne.jp/27211/genre_dir/",
-            "八尾市": "http://itp.ne.jp/27212/genre_dir/",
-            "寝屋川市": "http://itp.ne.jp/27215/genre_dir/"
+            "大阪府全域": "http://itp.ne.jp/27/genre_dir/"
         }
     },
     "京都": {
         "url": "https://itp.ne.jp/kyoto/",
         "sub_region": {
-            "京都市": "http://itp.ne.jp/26100/genre_dir/",
-            "宇治市": "http://itp.ne.jp/26204/genre_dir/",
-            "亀岡市": "http://itp.ne.jp/26206/genre_dir/",
-            "舞鶴市": "http://itp.ne.jp/26202/genre_dir/",
-            "城陽市": "http://itp.ne.jp/26207/genre_dir/",
-            "長岡京市": "http://itp.ne.jp/26209/genre_dir/",
-            "福知山市": "http://itp.ne.jp/26201/genre_dir/",
-            "八幡市": "http://itp.ne.jp/26210/genre_dir/",
-            "木津川市": "http://itp.ne.jp/26214/genre_dir/",
-            "京田辺市": "http://itp.ne.jp/26211/genre_dir/"
+            "京都府全域": "http://itp.ne.jp/26/genre_dir/"
         }
     },
     "滋賀": {
         "url": "https://itp.ne.jp/shiga/",
         "sub_region": {
-            "大津市": "http://itp.ne.jp/25201/genre_dir/",
-            "草津市": "http://itp.ne.jp/25206/genre_dir/",
-            "長浜市": "http://itp.ne.jp/25203/genre_dir/",
-            "東近江市": "http://itp.ne.jp/25213/genre_dir/",
-            "彦根市": "http://itp.ne.jp/25202/genre_dir/",
-            "甲賀市": "http://itp.ne.jp/25209/genre_dir/",
-            "近江八幡市": "http://itp.ne.jp/25204/genre_dir/",
-            "守山市": "http://itp.ne.jp/25207/genre_dir/",
-            "栗東市": "http://itp.ne.jp/25208/genre_dir/",
-            "湖南市": "http://itp.ne.jp/25211/genre_dir/"
+            "滋賀県全域": "http://itp.ne.jp/25/genre_dir/"
         }
     },
     "兵庫": {
         "url": "https://itp.ne.jp/hyogo/",
         "sub_region": {
-            "神戸市": "http://itp.ne.jp/28100/genre_dir/",
-            "姫路市": "http://itp.ne.jp/28201/genre_dir/",
-            "西宮市": "http://itp.ne.jp/28204/genre_dir/",
-            "尼崎市": "http://itp.ne.jp/28202/genre_dir/",
-            "明石市": "http://itp.ne.jp/28203/genre_dir/",
-            "加古川市": "http://itp.ne.jp/28210/genre_dir/",
-            "宝塚市": "http://itp.ne.jp/28214/genre_dir/",
-            "伊丹市": "http://itp.ne.jp/28207/genre_dir/",
-            "川西市": "http://itp.ne.jp/28217/genre_dir/",
-            "三田市": "http://itp.ne.jp/28219/genre_dir/"
+            "兵庫県全域": "http://itp.ne.jp/28/genre_dir/"
         }
     },
     "奈良": {
         "url": "https://itp.ne.jp/nara/",
         "sub_region": {
-            "奈良市": "http://itp.ne.jp/29201/genre_dir/",
-            "橿原市": "http://itp.ne.jp/29205/genre_dir/",
-            "生駒市": "http://itp.ne.jp/29209/genre_dir/",
-            "大和郡山市": "http://itp.ne.jp/29203/genre_dir/",
-            "香芝市": "http://itp.ne.jp/29210/genre_dir/",
-            "天理市": "http://itp.ne.jp/29204/genre_dir/",
-            "大和高田市": "http://itp.ne.jp/29202/genre_dir/",
-            "桜井市": "http://itp.ne.jp/29206/genre_dir/",
-            "葛城市": "http://itp.ne.jp/29211/genre_dir/",
-            "五條市": "http://itp.ne.jp/29207/genre_dir/"
+            "奈良県全域": "http://itp.ne.jp/29/genre_dir/"
         }
     },
     "和歌山": {
         "url": "https://itp.ne.jp/wakayama/",
         "sub_region": {
-            "和歌山市": "http://itp.ne.jp/30201/genre_dir/",
-            "田辺市": "http://itp.ne.jp/30206/genre_dir/",
-            "橋本市": "http://itp.ne.jp/30203/genre_dir/",
-            "紀の川市": "http://itp.ne.jp/30208/genre_dir/",
-            "海南市": "http://itp.ne.jp/30202/genre_dir/",
-            "岩出市": "http://itp.ne.jp/30209/genre_dir/",
-            "新宮市": "http://itp.ne.jp/30207/genre_dir/",
-            "有田市": "http://itp.ne.jp/30204/genre_dir/",
-            "有田郡有田川町": "http://itp.ne.jp/30366/genre_dir/",
-            "御坊市": "http://itp.ne.jp/30205/genre_dir/"
+            "和歌山県全域": "http://itp.ne.jp/30/genre_dir/"
         }
     },
     "広島": {
         "url": "https://itp.ne.jp/hiroshima/",
         "sub_region": {
-            "広島市": "http://itp.ne.jp/34100/genre_dir/",
-            "福山市": "http://itp.ne.jp/34207/genre_dir/",
-            "呉市": "http://itp.ne.jp/34202/genre_dir/",
-            "東広島市": "http://itp.ne.jp/34212/genre_dir/",
-            "尾道市": "http://itp.ne.jp/34205/genre_dir/",
-            "廿日市市": "http://itp.ne.jp/34213/genre_dir/",
-            "三原市": "http://itp.ne.jp/34204/genre_dir/",
-            "三次市": "http://itp.ne.jp/34209/genre_dir/",
-            "府中市": "http://itp.ne.jp/34208/genre_dir/",
-            "庄原市": "http://itp.ne.jp/34210/genre_dir/"
+            "広島県全域": "http://itp.ne.jp/34/genre_dir/"
         }
     },
     "山口": {
         "url": "https://itp.ne.jp/yamaguchi/",
         "sub_region": {
-            "下関市": "http://itp.ne.jp/35201/genre_dir/",
-            "山口市": "http://itp.ne.jp/35203/genre_dir/",
-            "宇部市": "http://itp.ne.jp/35202/genre_dir/",
-            "周南市": "http://itp.ne.jp/35215/genre_dir/",
-            "岩国市": "http://itp.ne.jp/35208/genre_dir/",
-            "防府市": "http://itp.ne.jp/35206/genre_dir/",
-            "山陽小野田市": "http://itp.ne.jp/35216/genre_dir/",
-            "下松市": "http://itp.ne.jp/35207/genre_dir/",
-            "萩市": "http://itp.ne.jp/35204/genre_dir/",
-            "光市": "http://itp.ne.jp/35210/genre_dir/"
+            "山口県全域": "http://itp.ne.jp/35/genre_dir/"
         }
     },
     "島根": {
         "url": "https://itp.ne.jp/shimane/",
         "sub_region": {
-            "松江市": "http://itp.ne.jp/32201/genre_dir/",
-            "出雲市": "http://itp.ne.jp/32203/genre_dir/",
-            "浜田市": "http://itp.ne.jp/32202/genre_dir/",
-            "益田市": "http://itp.ne.jp/32204/genre_dir/",
-            "雲南市": "http://itp.ne.jp/32209/genre_dir/",
-            "安来市": "http://itp.ne.jp/32206/genre_dir/",
-            "大田市": "http://itp.ne.jp/32205/genre_dir/",
-            "江津市": "http://itp.ne.jp/32207/genre_dir/",
-            "隠岐郡隠岐の島町": "http://itp.ne.jp/32528/genre_dir/",
-            "仁多郡奥出雲町": "http://itp.ne.jp/32343/genre_dir/"
+            "島根県全域": "http://itp.ne.jp/32/genre_dir/"
         }
     },
     "岡山": {
         "url": "https://itp.ne.jp/okayama/",
         "sub_region": {
-            "岡山市": "http://itp.ne.jp/33100/genre_dir/",
-            "倉敷市": "http://itp.ne.jp/33202/genre_dir/",
-            "津山市": "http://itp.ne.jp/33203/genre_dir/",
-            "総社市": "http://itp.ne.jp/33208/genre_dir/",
-            "玉野市": "http://itp.ne.jp/33204/genre_dir/",
-            "笠岡市": "http://itp.ne.jp/33205/genre_dir/",
-            "真庭市": "http://itp.ne.jp/33214/genre_dir/",
-            "井原市": "http://itp.ne.jp/33207/genre_dir/",
-            "赤磐市": "http://itp.ne.jp/33213/genre_dir/",
-            "瀬戸内市": "http://itp.ne.jp/33212/genre_dir/"
+            "岡山県全域": "http://itp.ne.jp/33/genre_dir/"
         }
     },
     "鳥取": {
         "url": "https://itp.ne.jp/tottori/",
         "sub_region": {
-            "鳥取市": "http://itp.ne.jp/31201/genre_dir/",
-            "米子市": "http://itp.ne.jp/31202/genre_dir/",
-            "倉吉市": "http://itp.ne.jp/31203/genre_dir/",
-            "境港市": "http://itp.ne.jp/31204/genre_dir/",
-            "東伯郡琴浦町": "http://itp.ne.jp/31371/genre_dir/",
-            "八頭郡八頭町": "http://itp.ne.jp/31329/genre_dir/",
-            "西伯郡大山町": "http://itp.ne.jp/31386/genre_dir/",
-            "東伯郡湯梨浜町": "http://itp.ne.jp/31370/genre_dir/"
+            "鳥取県全域": "http://itp.ne.jp/31/genre_dir/"
         }
     },
     "愛媛": {
         "url": "https://itp.ne.jp/ehime/",
         "sub_region": {
-            "松山市": "http://itp.ne.jp/38201/genre_dir/",
-            "今治市": "http://itp.ne.jp/38202/genre_dir/",
-            "新居浜市": "http://itp.ne.jp/38205/genre_dir/",
-            "西条市": "http://itp.ne.jp/38206/genre_dir/",
-            "四国中央市": "http://itp.ne.jp/38213/genre_dir/",
-            "宇和島市": "http://itp.ne.jp/38203/genre_dir/",
-            "大洲市": "http://itp.ne.jp/38207/genre_dir/",
-            "西予市": "http://itp.ne.jp/38214/genre_dir/",
-            "八幡浜市": "http://itp.ne.jp/38204/genre_dir/",
-            "伊予市": "http://itp.ne.jp/38210/genre_dir/"
+            "愛媛県全域": "http://itp.ne.jp/38/genre_dir/"
         }
     },
     "香川": {
         "url": "https://itp.ne.jp/kagawa/",
         "sub_region": {
-            "高松市": "http://itp.ne.jp/37201/genre_dir/",
-            "丸亀市": "http://itp.ne.jp/37202/genre_dir/",
-            "三豊市": "http://itp.ne.jp/37208/genre_dir/",
-            "観音寺市": "http://itp.ne.jp/37205/genre_dir/",
-            "坂出市": "http://itp.ne.jp/37203/genre_dir/",
-            "さぬき市": "http://itp.ne.jp/37206/genre_dir/",
-            "善通寺市": "http://itp.ne.jp/37204/genre_dir/",
-            "東かがわ市": "http://itp.ne.jp/37207/genre_dir/",
-            "木田郡三木町": "http://itp.ne.jp/37341/genre_dir/",
-            "綾歌郡綾川町": "http://itp.ne.jp/37387/genre_dir/"
+            "香川県全域": "http://itp.ne.jp/37/genre_dir/"
         }
     },
     "徳島": {
         "url": "https://itp.ne.jp/tokushima/",
         "sub_region": {
-            "徳島市": "http://itp.ne.jp/36201/genre_dir/",
-            "阿南市": "http://itp.ne.jp/36204/genre_dir/",
-            "鳴門市": "http://itp.ne.jp/36202/genre_dir/",
-            "吉野川市": "http://itp.ne.jp/36205/genre_dir/",
-            "小松島市": "http://itp.ne.jp/36203/genre_dir/",
-            "阿波市": "http://itp.ne.jp/36206/genre_dir/",
-            "板野郡藍住町": "http://itp.ne.jp/36403/genre_dir/",
-            "美馬市": "http://itp.ne.jp/36207/genre_dir/",
-            "三好市": "http://itp.ne.jp/36208/genre_dir/",
-            "名西郡石井町": "http://itp.ne.jp/36341/genre_dir/"
+            "徳島県全域": "http://itp.ne.jp/36/genre_dir/"
         }
     },
     "高知": {
         "url": "https://itp.ne.jp/kouchi/",
         "sub_region": {
-            "高知市": "http://itp.ne.jp/39201/genre_dir/",
-            "南国市": "http://itp.ne.jp/39204/genre_dir/",
-            "四万十市": "http://itp.ne.jp/39210/genre_dir/",
-            "香南市": "http://itp.ne.jp/39211/genre_dir/",
-            "香美市": "http://itp.ne.jp/39212/genre_dir/",
-            "土佐市": "http://itp.ne.jp/39205/genre_dir/",
-            "吾川郡いの町": "http://itp.ne.jp/39386/genre_dir/",
-            "須崎市": "http://itp.ne.jp/39206/genre_dir/",
-            "宿毛市": "http://itp.ne.jp/39208/genre_dir/",
-            "安芸市": "http://itp.ne.jp/39203/genre_dir/"
+            "高知県全域": "http://itp.ne.jp/39/genre_dir/"
         }
     },
     "福岡": {
         "url": "https://itp.ne.jp/fukuoka/",
         "sub_region": {
-            "福岡市": "http://itp.ne.jp/40130/genre_dir/",
-            "北九州市": "http://itp.ne.jp/40100/genre_dir/",
-            "久留米市": "http://itp.ne.jp/40203/genre_dir/",
-            "飯塚市": "http://itp.ne.jp/40205/genre_dir/",
-            "大牟田市": "http://itp.ne.jp/40202/genre_dir/",
-            "春日市": "http://itp.ne.jp/40218/genre_dir/",
-            "筑紫野市": "http://itp.ne.jp/40217/genre_dir/",
-            "糸島市": "http://itp.ne.jp/40230/genre_dir/",
-            "宗像市": "http://itp.ne.jp/40220/genre_dir/",
-            "大野城市": "http://itp.ne.jp/40219/genre_dir/"
+            "福岡県全域": "http://itp.ne.jp/40/genre_dir/"
         }
     },
     "長崎": {
         "url": "https://itp.ne.jp/nagasaki/",
         "sub_region": {
-            "長崎市": "http://itp.ne.jp/42201/genre_dir/",
-            "佐世保市": "http://itp.ne.jp/42202/genre_dir/",
-            "諫早市": "http://itp.ne.jp/42204/genre_dir/",
-            "大村市": "http://itp.ne.jp/42205/genre_dir/",
-            "南島原市": "http://itp.ne.jp/42214/genre_dir/",
-            "島原市": "http://itp.ne.jp/42203/genre_dir/",
-            "雲仙市": "http://itp.ne.jp/42213/genre_dir/",
-            "西彼杵郡長与町": "http://itp.ne.jp/42307/genre_dir/",
-            "五島市": "http://itp.ne.jp/42211/genre_dir/",
-            "平戸市": "http://itp.ne.jp/42207/genre_dir/"
+            "長崎県全域": "http://itp.ne.jp/42/genre_dir/"
         }
     },
     "大分": {
         "url": "https://itp.ne.jp/oita/",
         "sub_region": {
-            "大分市": "http://itp.ne.jp/44201/genre_dir/",
-            "別府市": "http://itp.ne.jp/44202/genre_dir/",
-            "中津市": "http://itp.ne.jp/44203/genre_dir/",
-            "佐伯市": "http://itp.ne.jp/44205/genre_dir/",
-            "日田市": "http://itp.ne.jp/44204/genre_dir/",
-            "宇佐市": "http://itp.ne.jp/44211/genre_dir/",
-            "臼杵市": "http://itp.ne.jp/44206/genre_dir/",
-            "豊後大野市": "http://itp.ne.jp/44212/genre_dir/",
-            "由布市": "http://itp.ne.jp/44213/genre_dir/",
-            "杵築市": "http://itp.ne.jp/44210/genre_dir/"
+            "大分県全域": "http://itp.ne.jp/44/genre_dir/"
         }
     },
     "佐賀": {
         "url": "https://itp.ne.jp/saga/",
         "sub_region": {
-            "佐賀市": "http://itp.ne.jp/41201/genre_dir/",
-            "唐津市": "http://itp.ne.jp/41202/genre_dir/",
-            "鳥栖市": "http://itp.ne.jp/41203/genre_dir/",
-            "伊万里市": "http://itp.ne.jp/41205/genre_dir/",
-            "武雄市": "http://itp.ne.jp/41206/genre_dir/",
-            "小城市": "http://itp.ne.jp/41208/genre_dir/",
-            "神埼市": "http://itp.ne.jp/41210/genre_dir/",
-            "鹿島市": "http://itp.ne.jp/41207/genre_dir/",
-            "嬉野市": "http://itp.ne.jp/41209/genre_dir/",
-            "三養基郡みやき町": "http://itp.ne.jp/41346/genre_dir/"
+            "佐賀県全域": "http://itp.ne.jp/41/genre_dir/"
         }
     },
     "熊本": {
         "url": "https://itp.ne.jp/kumamoto/",
         "sub_region": {
-            "熊本市": "http://itp.ne.jp/43100/genre_dir/",
-            "八代市": "http://itp.ne.jp/43202/genre_dir/",
-            "天草市": "http://itp.ne.jp/43215/genre_dir/",
-            "玉名市": "http://itp.ne.jp/43206/genre_dir/",
-            "宇城市": "http://itp.ne.jp/43213/genre_dir/",
-            "山鹿市": "http://itp.ne.jp/43208/genre_dir/",
-            "荒尾市": "http://itp.ne.jp/43204/genre_dir/",
-            "合志市": "http://itp.ne.jp/43216/genre_dir/",
-            "菊池市": "http://itp.ne.jp/43210/genre_dir/",
-            "菊池郡菊陽町": "http://itp.ne.jp/43404/genre_dir/"
+            "熊本県全域": "http://itp.ne.jp/43/genre_dir/"
         }
     },
     "宮崎": {
         "url": "https://itp.ne.jp/miyazaki/",
         "sub_region": {
-            "宮崎市": "http://itp.ne.jp/45201/genre_dir/",
-            "都城市": "http://itp.ne.jp/45202/genre_dir/",
-            "延岡市": "http://itp.ne.jp/45203/genre_dir/",
-            "日向市": "http://itp.ne.jp/45206/genre_dir/",
-            "日南市": "http://itp.ne.jp/45204/genre_dir/",
-            "小林市": "http://itp.ne.jp/45205/genre_dir/",
-            "西都市": "http://itp.ne.jp/45208/genre_dir/",
-            "北諸県郡三股町": "http://itp.ne.jp/45341/genre_dir/",
-            "児湯郡高鍋町": "http://itp.ne.jp/45401/genre_dir/",
-            "えびの市": "http://itp.ne.jp/45209/genre_dir/"
+            "宮崎県全域": "http://itp.ne.jp/45/genre_dir/"
         }
     },
     "鹿児島": {
         "url": "https://itp.ne.jp/kagoshima/",
         "sub_region": {
-            "鹿児島市": "http://itp.ne.jp/46201/genre_dir/",
-            "霧島市": "http://itp.ne.jp/46218/genre_dir/",
-            "鹿屋市": "http://itp.ne.jp/46203/genre_dir/",
-            "薩摩川内市": "http://itp.ne.jp/46215/genre_dir/",
-            "姶良市": "http://itp.ne.jp/46225/genre_dir/",
-            "出水市": "http://itp.ne.jp/46208/genre_dir/",
-            "日置市": "http://itp.ne.jp/46216/genre_dir/",
-            "奄美市": "http://itp.ne.jp/46222/genre_dir/",
-            "指宿市": "http://itp.ne.jp/46210/genre_dir/",
-            "曽於市": "http://itp.ne.jp/46217/genre_dir/"
+            "鹿児島県全域": "http://itp.ne.jp/46/genre_dir/"
         }
     },
     "沖縄": {
         "url": "https://itp.ne.jp/okinawa/",
         "sub_region": {
-            "那覇市": "http://itp.ne.jp/47201/genre_dir/",
-            "沖縄市": "http://itp.ne.jp/47211/genre_dir/",
-            "うるま市": "http://itp.ne.jp/47213/genre_dir/",
-            "浦添市": "http://itp.ne.jp/47208/genre_dir/",
-            "宜野湾市": "http://itp.ne.jp/47205/genre_dir/",
-            "名護市": "http://itp.ne.jp/47209/genre_dir/",
-            "糸満市": "http://itp.ne.jp/47210/genre_dir/",
-            "豊見城市": "http://itp.ne.jp/47212/genre_dir/",
-            "宮古島市": "http://itp.ne.jp/47214/genre_dir/",
-            "石垣市": "http://itp.ne.jp/47207/genre_dir/"
+            "沖縄県全域": "http://itp.ne.jp/47/genre_dir/"
         }
     }
 }
