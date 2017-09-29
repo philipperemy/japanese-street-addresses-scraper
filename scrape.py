@@ -122,7 +122,7 @@ def main():
                         request_url = forge_url(prefix_url, iteration)
                         try:
                             pass
-                            # process_one_url(request_url)
+                            process_one_url(request_url)
                         except requests.exceptions.ConnectionError:
                             logging.info('Received a ConnectionError. Will wait 10 seconds, then resume.')
                             change_ip()
