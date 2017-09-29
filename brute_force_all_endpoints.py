@@ -48,7 +48,7 @@ def process_url(url):
     if url in ALL_URL_DICT:
         print('URL = {} already fetched. Skipping.'.format(url))
     else:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         status = (response.status_code == 200)
         ALL_URL_DICT[url] = status
         print('-> URL = {}, STATUS = {}'.format(url, status))

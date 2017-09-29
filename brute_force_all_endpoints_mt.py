@@ -4,6 +4,7 @@ from multiprocessing import Lock
 
 import requests
 from requests.exceptions import ConnectionError
+from natsort import natsorted
 
 from scrape import change_ip
 
@@ -46,8 +47,8 @@ def main():
         all_urls = []
         range_j = range(i, i + steps)
         all_urls.extend([forge_brute_force_url(j) for j in range_j])
-        all_urls.extend([forge_brute_force_url('0' + j) for j in range_j])
-        all_urls = sorted(list(set(all_urls) - set(ALL_URL_DICT.keys())))
+        all_urls.extend([forge_brute_force_url('0' + str(j)) for j in range_j])
+        all_urls = natsorted(sorted(list(set(all_urls) - set(ALL_URL_DICT.keys()))))
 
         if len(all_urls) > 0:
             status_codes = parallel_function(process_url, all_urls, num_threads=4)
