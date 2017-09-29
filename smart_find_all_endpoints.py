@@ -4,6 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import NavigableString
 
+from scrape import change_ip
+
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
 
 
@@ -14,8 +16,16 @@ def get_soup(url):
     return soup
 
 
+def get_soup_vpn(url):
+    try:
+        return get_soup(url)
+    except:
+        change_ip()
+        return get_soup(url)
+
+
 def get_sub_sub_region(sub_region_url):
-    soup = get_soup(sub_region_url)
+    soup = get_soup_vpn(sub_region_url)
     refine_block = [b for b in soup.find_all('div', {'class': 'refineBlock'}) if 'address_narrowing' in str(b)]
     if len(refine_block) == 0:
         return []
@@ -27,7 +37,7 @@ def get_sub_sub_region(sub_region_url):
 
 
 def get_sub_regions(region_url, include_all_sub_regions=True):
-    soup = get_soup(region_url)
+    soup = get_soup_vpn(region_url)
     all_links_1 = [a.attrs['href'] for a in soup.find('section', {'class': 'Japamap'}).find_all('a')]
     all_links_1 = sorted(list(filter(lambda x: 'http' in x, all_links_1)))
     resp = dict()
@@ -45,10 +55,8 @@ def get_sub_regions(region_url, include_all_sub_regions=True):
 
 
 def main(include_all_sub_regions=True, output_filename='region.json'):
-    response = requests.get(YELLOW_PAGE_URL)
-    assert response.status_code == 200
+    soup = get_soup_vpn(YELLOW_PAGE_URL)
     regions_dict = dict()
-    soup = BeautifulSoup(response.content, 'html.parser')
     regions = soup.find('div', {'class': 'txt-table'}).find_all('a')
     for region in regions:
         print('-' * 80)
