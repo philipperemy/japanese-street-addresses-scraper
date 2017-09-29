@@ -13,9 +13,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
 
-ADDRESS_FP = open('/tmp/addresses.txt', 'wb')
-NAME_FP = open('/tmp/names.txt', 'wb')
-EMAIL_FP = open('/tmp/emails.txt', 'wb')
+ADDRESS_FP = open(os.path.expanduser('~/Desktop/addresses.txt'), 'wb')
+NAME_FP = open(os.path.expanduser('~/Desktop/names.txt'), 'wb')
+EMAIL_FP = open(os.path.expanduser('~/Desktop/emails.txt'), 'wb')
 PERSISTENCE_FILENAME = 'persistence.txt'
 
 USE_VPN = True
@@ -96,21 +96,16 @@ def main():
     with open('regions.json', 'rb') as r:
         regions = OrderedDict(json.load(r))
 
-    sub_regions_already_fetched = []
+    persistence = []
     if os.path.isfile(PERSISTENCE_FILENAME):
-        with open(PERSISTENCE_FILENAME, 'rb') as r:
-            lines = [v.decode('utf8').strip() for v in r.readlines()]
-            sub_regions_already_fetched.extend(lines)
+        with open(PERSISTENCE_FILENAME, 'r') as r:
+            lines = [v.strip() for v in r.readlines()]
+            persistence.extend(lines)
 
     for region, sub_regions in regions.items():
         logging.info('REGION: {}'.format(region))
         sub_regions_ordered = OrderedDict(sub_regions)
         for sub_region, prefix_urls in sub_regions_ordered['sub_region'].items():
-
-            if sub_region in sub_regions_already_fetched:
-                logging.info('SKIPPING: SUB_REGION ALREADY FETCHED {}'.format(sub_region))
-                continue
-
             logging.info('-' * 80)
             logging.info('SUB_REGION: {}'.format(sub_region))
             logging.info(prefix_urls)
@@ -120,20 +115,21 @@ def main():
                 try:
                     for iteration in range(1000000):
                         request_url = forge_url(prefix_url, iteration)
+                        if request_url in persistence:
+                            logging.info('URL already requested [{}]. Skipping.'.format(request_url))
+                            continue
                         try:
-                            pass
                             process_one_url(request_url)
+                            with open(PERSISTENCE_FILENAME, 'a+') as w:
+                                w.write(request_url + '\n')
+                                w.flush()
                         except requests.exceptions.ConnectionError:
                             logging.info('Received a ConnectionError. Will wait 10 seconds, then resume.')
                             change_ip()
                             sleep(10)
+
                 except PaginationEndException:
                     logging.info('PaginationEndException!')
-
-            with open(PERSISTENCE_FILENAME, 'ab+') as w:
-                w.write(sub_region.encode('utf8'))
-                w.write('\n'.encode('utf8'))
-                w.flush()
 
             logging.info('SUB_REGION DONE: {}'.format(sub_region))
         logging.info('REGION DONE: {}'.format(region))
