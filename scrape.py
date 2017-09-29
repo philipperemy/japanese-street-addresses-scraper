@@ -13,9 +13,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
 
-ADDRESS_FP = open(os.path.expanduser('~/Desktop/addresses.txt'), 'wb')
-NAME_FP = open(os.path.expanduser('~/Desktop/names.txt'), 'wb')
-EMAIL_FP = open(os.path.expanduser('~/Desktop/emails.txt'), 'wb')
+ADDRESS_FP = open(os.path.expanduser('~/Desktop/addresses.txt'), 'ab+')
+NAME_FP = open(os.path.expanduser('~/Desktop/names.txt'), 'ab+')
+EMAIL_FP = open(os.path.expanduser('~/Desktop/emails.txt'), 'ab+')
 PERSISTENCE_FILENAME = 'persistence.txt'
 
 USE_VPN = True
