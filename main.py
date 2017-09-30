@@ -26,7 +26,7 @@ def run_random():
     random.shuffle(all_urls)
     query_iterations = 0
     for i, url in enumerate(all_urls):
-        if query_iterations % 10 == 0:
+        if query_iterations % 10 == 1:
             logging.info('IP SWITCHING.')
             change_ip()  # we do not want to fire all our IPs. So lets switch from time to time.
         logging.info('({1}/{2}) MAIN - REQUESTING {0}'.format(url, i, len(all_urls)))
