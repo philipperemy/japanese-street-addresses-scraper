@@ -1,10 +1,12 @@
 import json
 import logging
+import random
 from glob import glob
-from random import shuffle
 
 from new_scrape import change_ip
 from new_scrape import run_scrape
+
+SEED = 42
 
 
 def run_random():
@@ -20,7 +22,8 @@ def run_random():
                 all_urls.extend(urls)
 
     # shuffle !!
-    shuffle(all_urls)
+    random.seed(SEED)
+    random.shuffle(all_urls)
     for i, url in enumerate(all_urls):
         if i % 10 == 0:
             logging.info('IP SWITCHING.')
