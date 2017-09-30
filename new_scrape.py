@@ -39,7 +39,19 @@ class PaginationEndException(Exception):
 def forge_url(prefix, iteration):
     # http://itp.ne.jp/46201/genre_dir/
     # https://itp.ne.jp/aomori/02201/genre_dir/pg/150/?num=20
+
+    # ALSO:
+    # ﻿https://itp.ne.jp/saga/41201/41201004/genre_dir/?nad=1&sr=1
+    # ﻿https://itp.ne.jp/saga/41201/41201004/genre_dir/pg/2/?nad=1&sr=1&num=50
+
+    if 'nad' in prefix:
+        return prefix.replace('genre_dir/', 'genre_dir/pg/{}/'.format(iteration)) + '&num=50'
+
     return prefix + 'pg/{}/?num=50'.format(iteration)
+
+
+assert forge_url('https://itp.ne.jp/saga/41201/41201004/genre_dir/?nad=1&sr=1',
+                 2) == 'https://itp.ne.jp/saga/41201/41201004/genre_dir/pg/2/?nad=1&sr=1&num=50'
 
 
 def write_entry(fp, el, code):
