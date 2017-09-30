@@ -100,10 +100,12 @@ def run_scrape(main_url):
     main_dir = os.path.expanduser('~/Desktop/data/{}/'.format(slug))
 
     if os.path.exists(main_dir):
-        size_check = os.path.getsize('{}/addresses.txt'.format(main_dir))
-        if size_check != 0:
-            logging.info('Already fetched! Skipping.')
-            return
+        logging.info('Already fetched! Skipping.')  # sometimes addresses are invalid.
+        return
+        # size_check = os.path.getsize('{}/addresses.txt'.format(main_dir))
+        # if size_check != 0:
+        #    logging.info('Already fetched! Skipping.')
+        #    return
 
     mkdir_p(main_dir)
 
