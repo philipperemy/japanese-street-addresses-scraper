@@ -62,7 +62,7 @@ def write_entry(fp, el, code):
 
 
 def process_one_url(url, address_fp, name_fp, email_fp):
-    addresses_found = []
+    # addresses_found = []
 
     logging.info('-> {}'.format(url))
     response = requests.get(url)
@@ -104,11 +104,11 @@ def process_one_url(url, address_fp, name_fp, email_fp):
                         if '〒' in str(c):
                             address = str(c.contents[1]).strip()
 
-                            if address in addresses_found:
-                                logging.info('Address already exists = {0}'.format(address))
-                                raise PaginationEndException()
+                            # if address in addresses_found:
+                            #     logging.info('Address already exists = {0}'.format(address))
+                            #     raise PaginationEndException()
+                            # addresses_found.append(address)
 
-                            addresses_found.append(address)
                             write_entry(fp=address_fp, el=address, code='ADDR')
                             # logging.info(address)
                             # address += '\n'
