@@ -125,7 +125,7 @@ def run_scrape(main_url):
 
     if os.path.isfile(address_filename):
         logging.info('Already fetched! Skipping.')  # sometimes addresses are invalid.
-        return
+        return False
         # size_check = os.path.getsize('{}/addresses.txt'.format(main_dir))
         # if size_check != 0:
         #    logging.info('Already fetched! Skipping.')
@@ -162,6 +162,8 @@ def run_scrape(main_url):
         except:
             pass
         raise ki
+
+    return True
 
 
 # process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
