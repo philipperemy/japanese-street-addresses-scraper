@@ -136,6 +136,7 @@ def run_scrape(main_url):
         os.remove(address_filename)
         os.remove(name_filename)
         os.remove(email_filename)
+        raise KeyboardInterrupt()
 
 
 # process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
