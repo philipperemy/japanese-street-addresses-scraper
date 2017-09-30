@@ -109,23 +109,33 @@ def run_scrape(main_url):
 
     mkdir_p(main_dir)
 
-    with open('{}/addresses.txt'.format(main_dir), 'wb') as address_fp:
-        with open('{}/names.txt'.format(main_dir), 'wb') as name_fp:
-            with open('{}/emails.txt'.format(main_dir), 'wb') as email_fp:
-                for iteration in range(1000000):
-                    request_url = forge_url(main_url, iteration)
-                    try:
-                        process_one_url(request_url, address_fp, name_fp, email_fp)
-                        with open(PERSISTENCE_FILENAME, 'a+') as w:
-                            w.write(request_url + '\n')
-                            w.flush()
-                    except requests.exceptions.ConnectionError:
-                        logging.error('Received a ConnectionError. Will change IP, wait 10 seconds, then resume.')
-                        change_ip()
-                        sleep(10)
-                    except PaginationEndException:
-                        logging.info('No more pages to scrape. Program will end successfully.')
-                        break
+    address_filename = '{}/addresses.txt'.format(main_dir)
+    name_filename = '{}/names.txt'.format(main_dir)
+    email_filename = '{}/emails.txt'.format(main_dir)
+    try:
+        with open(address_filename, 'wb') as address_fp:
+            with open(name_filename, 'wb') as name_fp:
+                with open(email_filename, 'wb') as email_fp:
+                    for iteration in range(1000000):
+                        request_url = forge_url(main_url, iteration)
+                        try:
+                            process_one_url(request_url, address_fp, name_fp, email_fp)
+                            with open(PERSISTENCE_FILENAME, 'a+') as w:
+                                w.write(request_url + '\n')
+                                w.flush()
+                        except requests.exceptions.ConnectionError:
+                            logging.error('Received a ConnectionError. Will change IP, wait 10 seconds, then resume.')
+                            change_ip()
+                            sleep(10)
+                        except PaginationEndException:
+                            logging.info('No more pages to scrape. Program will end successfully.')
+                            break
+    except KeyboardInterrupt:
+        logging.error('WE RECEIVED A KEYBOARD INTERRUPT. Program will exit.')
+        sleep(2)
+        os.remove(address_filename)
+        os.remove(name_filename)
+        os.remove(email_filename)
 
 
 # process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
