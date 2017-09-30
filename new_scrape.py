@@ -98,8 +98,11 @@ def process_one_url(url, address_fp, name_fp, email_fp):
 def run_scrape(main_url):
     slug = slugify(main_url)
     main_dir = os.path.expanduser('~/Desktop/data/{}/'.format(slug))
+    address_filename = '{}/addresses.txt'.format(main_dir)
+    name_filename = '{}/names.txt'.format(main_dir)
+    email_filename = '{}/emails.txt'.format(main_dir)
 
-    if os.path.exists(main_dir):
+    if os.path.isfile(address_filename):
         logging.info('Already fetched! Skipping.')  # sometimes addresses are invalid.
         return
         # size_check = os.path.getsize('{}/addresses.txt'.format(main_dir))
@@ -109,9 +112,6 @@ def run_scrape(main_url):
 
     mkdir_p(main_dir)
 
-    address_filename = '{}/addresses.txt'.format(main_dir)
-    name_filename = '{}/names.txt'.format(main_dir)
-    email_filename = '{}/emails.txt'.format(main_dir)
     try:
         with open(address_filename, 'wb') as address_fp:
             with open(name_filename, 'wb') as name_fp:
