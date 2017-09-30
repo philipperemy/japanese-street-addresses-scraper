@@ -111,12 +111,11 @@ def main(main_url):
                             w.write(request_url + '\n')
                             w.flush()
                     except requests.exceptions.ConnectionError:
-                        logging.info('Received a ConnectionError. Will wait 10 seconds, then resume.')
+                        logging.error('Received a ConnectionError. Will change IP, wait 10 seconds, then resume.')
                         change_ip()
                         sleep(10)
                     except PaginationEndException:
-                        logging.info('PaginationEndException!')
-                        logging.info('Program will end.')
+                        logging.info('No more pages to scrape. Program will end successfully.')
                         break
 
 
