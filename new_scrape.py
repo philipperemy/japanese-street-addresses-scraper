@@ -105,6 +105,7 @@ def process_one_url(url, address_fp, name_fp, email_fp):
                             address = str(c.contents[1]).strip()
 
                             if address in addresses_found:
+                                logging.info('Address already exists = {0}'.format(address))
                                 raise PaginationEndException()
 
                             addresses_found.append(address)
