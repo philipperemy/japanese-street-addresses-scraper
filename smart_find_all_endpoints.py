@@ -1,4 +1,6 @@
 import json
+import os
+from glob import glob
 
 import requests
 from bs4 import BeautifulSoup
@@ -7,6 +9,7 @@ from bs4 import NavigableString
 from scrape import change_ip
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
+OUTPUT_DIR = 'regions'
 
 
 def get_soup(url):
@@ -44,7 +47,7 @@ def get_sub_sub_region(sub_region_url):
     return links
 
 
-def get_sub_regions(region_url, include_all_sub_regions=True):
+def get_sub_regions(region_url):
     soup = get_soup_vpn(region_url)
     resp = dict()
 
@@ -60,30 +63,37 @@ def get_sub_regions(region_url, include_all_sub_regions=True):
         # print('Found links {}'.format(links_found))
         all_links_2.extend(links_found)
     resp['level_1'] = all_links_1
-    resp['level_2'] = all_links_2
-    print('Found {0} links for level 1'.format(len(all_links_1)))
-    print('Found {0} links for level 2'.format(len(all_links_2)))
+    resp['level_2'] = sorted(list(set(all_links_2)))
+    print('Found {0} links for level 1.'.format(len(all_links_1)))
+    print('Found {0} links for level 2.'.format(len(all_links_2)))
     return resp
 
 
-def main(include_all_sub_regions=True, output_filename='region.json'):
+def main():
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+
+    json_regions = [v.split('/')[1].split('.')[0] for v in glob(OUTPUT_DIR + '/*.json')]
     soup = get_soup_vpn(YELLOW_PAGE_URL)
-    regions_dict = dict()
     regions = soup.find('div', {'class': 'txt-table'}).find_all('a')
     for region in regions:
         print('-' * 80)
         if not isinstance(region, NavigableString):
             region_name = str(region.contents[0])
-            url = YELLOW_PAGE_URL + str(region.attrs['href'])
-            print(region_name, url)
-            sub_regions = get_sub_regions(region_url=url, include_all_sub_regions=include_all_sub_regions)
-            regions_dict[region_name] = dict()
-            regions_dict[region_name]['url'] = url
-            regions_dict[region_name]['sub_region'] = sub_regions
+            output = {}
+            if region_name not in json_regions:
+                url = YELLOW_PAGE_URL + str(region.attrs['href'])
+                print(region_name, url)
+                sub_regions = get_sub_regions(region_url=url)
+                output[region_name] = dict()
+                output[region_name]['url'] = url
+                output[region_name]['sub_region'] = sub_regions
 
-    with open(output_filename, 'wb') as w:
-        w.write(json.dumps(regions_dict, ensure_ascii=False, indent=4).encode('utf8'))
+                with open(OUTPUT_DIR + '/{}.json'.format(region_name), 'wb') as w:
+                    w.write(json.dumps(output, ensure_ascii=False, indent=4).encode('utf8'))
+            else:
+                print('REGION ALREADY FETCHED = {0}'.format(region_name))
 
 
 if __name__ == '__main__':
-    main(include_all_sub_regions=True, output_filename='region.json')
+    main()
