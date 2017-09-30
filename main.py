@@ -2,6 +2,7 @@ import json
 import logging
 from glob import glob
 
+from new_scrape import change_ip
 from new_scrape import run_scrape
 
 
@@ -14,8 +15,11 @@ def run():
                 print(region_name)
                 urls = region_data['sub_region']['level_2']
                 urls = sorted(list(set(urls)))  # make sure no redundancy.
-                for url in urls:
-                    logging.info('MAIN - REQUESTING {0}'.format(url))
+                for i, url in enumerate(urls):
+                    if i % 30 == 0:
+                        logging.info('IP SWITCHING.')
+                        change_ip()  # we dont want to fire all our IPs. So lets switch from time to time.
+                    logging.info('({1}/{2}) MAIN - REQUESTING {0}'.format(url, i, len(urls)))
                     run_scrape(url)
 
 
