@@ -24,6 +24,7 @@ def get_soup_vpn(url):
         try:
             return get_soup(url)
         except:
+            print('ERROR COULD NOT FETCH THIS URL {0}'.format(url))
             return None
 
 
