@@ -130,13 +130,13 @@ def run_scrape(main_url):
                         except PaginationEndException:
                             logging.info('No more pages to scrape. Program will end successfully.')
                             break
-    except KeyboardInterrupt:
+    except KeyboardInterrupt as ki:
         logging.error('WE RECEIVED A KEYBOARD INTERRUPT. Program will exit.')
         sleep(2)
         os.remove(address_filename)
         os.remove(name_filename)
         os.remove(email_filename)
-        raise KeyboardInterrupt()
+        raise ki
 
 
 # process_one_url('https://itp.ne.jp/hokkaido/01100/genre_dir/pg/191/?num=20')
