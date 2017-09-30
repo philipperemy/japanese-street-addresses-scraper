@@ -16,9 +16,9 @@ def run():
                 urls = region_data['sub_region']['level_2']
                 urls = sorted(list(set(urls)))  # make sure no redundancy.
                 for i, url in enumerate(urls):
-                    if i % 30 == 0:
+                    if i % 10 == 0:
                         logging.info('IP SWITCHING.')
-                        change_ip()  # we dont want to fire all our IPs. So lets switch from time to time.
+                        change_ip()  # we do not want to fire all our IPs. So lets switch from time to time.
                     logging.info('({1}/{2}) MAIN - REQUESTING {0}'.format(url, i, len(urls)))
                     run_scrape(url)
 
