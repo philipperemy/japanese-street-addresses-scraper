@@ -1,6 +1,7 @@
 import logging
 import os
 import re
+import shutil
 import sys
 from time import sleep
 
@@ -143,6 +144,10 @@ def run_scrape(main_url):
         os.remove(address_filename)
         os.remove(name_filename)
         os.remove(email_filename)
+        try:
+            shutil.rmtree(main_dir)
+        except:
+            pass
         raise ki
 
 
