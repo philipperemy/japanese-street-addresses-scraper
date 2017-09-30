@@ -95,9 +95,16 @@ def process_one_url(url, address_fp, name_fp, email_fp):
                             break
 
 
-def main(main_url):
+def run_scrape(main_url):
     slug = slugify(main_url)
     main_dir = os.path.expanduser('~/Desktop/data/{}/'.format(slug))
+
+    if os.path.exists(main_dir):
+        size_check = os.path.getsize('{}/addresses.txt'.format(main_dir))
+        if size_check != 0:
+            logging.info('Already fetched! Skipping.')
+            return
+
     mkdir_p(main_dir)
 
     with open('{}/addresses.txt'.format(main_dir), 'wb') as address_fp:
@@ -150,4 +157,4 @@ if __name__ == '__main__':
         logging.error('Please specify a sub region url as a parameter. '
                       'For example:﻿https://itp.ne.jp/mie/24441/genre_dir/')
         exit(1)
-    main(sys.argv[1])
+    run_scrape(sys.argv[1])
