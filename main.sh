@@ -5,6 +5,5 @@ while true; do
     sleep 3600
     echo I am awake now lets go
     ps aux | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} python | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -v "grep python" | awk '{print $2}' | xargs kill -9
-    ls -t ../data | head -n 1 | xargs rm -f
     echo Program should be dead by now
 done
