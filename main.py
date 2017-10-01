@@ -24,6 +24,7 @@ def run_random():
     # shuffle !!
     random.seed(SEED)
     random.shuffle(all_urls)
+    change_ip()
     query_iterations = 0
     for i, url in enumerate(all_urls):
         if query_iterations % 30 == 1:
