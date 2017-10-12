@@ -24,10 +24,10 @@ def run_random():
     # shuffle !!
     random.seed(SEED)
     random.shuffle(all_urls)
-    change_ip()
+    # change_ip()
     query_iterations = 0
     for i, url in enumerate(all_urls):
-        if query_iterations % 30 == 1:
+        if query_iterations % 70 == 69:
             logging.info('IP SWITCHING.')
             change_ip()  # we do not want to fire all our IPs. So lets switch from time to time.
         logging.info('({1}/{2}) MAIN - REQUESTING {0}'.format(url, i, len(all_urls)))
