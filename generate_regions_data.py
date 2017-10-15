@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import NavigableString
 
-from scrape import change_ip
+from core_scraper import change_ip
 
 YELLOW_PAGE_URL = 'https://itp.ne.jp'
 OUTPUT_DIR = 'regions'

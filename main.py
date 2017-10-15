@@ -3,8 +3,8 @@ import logging
 import random
 from glob import glob
 
-from new_scrape import change_ip
-from new_scrape import run_scrape
+from core_scraper import change_ip
+from core_scraper import run_scrape
 
 SEED = 42
 
@@ -24,7 +24,6 @@ def run_random():
     # shuffle !!
     random.seed(SEED)
     random.shuffle(all_urls)
-    # change_ip()
     query_iterations = 0
     for i, url in enumerate(all_urls):
         if query_iterations % 70 == 69:
