@@ -19,3 +19,12 @@
 - natsort
 - beautifulsoup4
 - unicode_slugify
+
+## Usage
+
+```
+https://github.com/philipperemy/japanese-street-addresses-scraper.git
+cd japanese-street-addresses-scraper
+pip3 install -r requirements.txt
+./main.sh # it starts the scraping!
+```
