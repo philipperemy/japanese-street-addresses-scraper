@@ -14,7 +14,7 @@
 
 - **Python 3.5+**
 - numpy
-- [expressvpn_python](github.com/philipperemy/expressvpn-python) - if you plan to use the VPN mode.
+- [expressvpn_python](https://github.com/philipperemy/expressvpn-python) - if you plan to use the VPN mode.
 - requests
 - natsort
 - beautifulsoup4
