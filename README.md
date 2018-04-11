@@ -1,5 +1,5 @@
 # Japanese Street Addresses Scraper
-*Scraper for Japanese street addresses (住所).* From [itp.ne.jp](itp.ne.jp).
+*Scraper for Japanese street addresses (住所).* From [itp.ne.jp](https://itp.ne.jp/?rf=1).
 
 <p align="center">
   <img src="http://kokoro.kir.jp/know/img/meibo1.gif" width="200">
