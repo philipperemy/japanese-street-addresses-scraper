@@ -8,7 +8,7 @@
 ## Some figures
 
 - **`7,225,873`** is the potential number of distinct postal addresses listed on the Japanese yellow pages.
-- **`12`** is the number of days it took to retrieve them all, using VPN and [IP auto switching](github.com/philipperemy/expressvpn-python).
+- **`12`** is the number of days it took to retrieve them all, using VPN and [IP auto switching](https://github.com/philipperemy/expressvpn-python).
 
 ## Script Requirements
 
