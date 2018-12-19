@@ -22,7 +22,7 @@
 
 ## Usage
 
-```
+```bash
 https://github.com/philipperemy/japanese-street-addresses-scraper.git
 cd japanese-street-addresses-scraper
 pip3 install -r requirements.txt
